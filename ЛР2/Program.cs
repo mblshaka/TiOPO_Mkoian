@@ -54,12 +54,12 @@ namespace ConsoleApp1
             catch(System.IO.IOException ex)
             {
                 Console.WriteLine("Ошибка считывания файла My_Data. Проверьте путь");
-                count_x = 0;
+                count_x = -1;
             }
             catch(System.FormatException ex)
             {
                 Console.WriteLine("В файле содержаться символы не числового формата ИЛИ в фалйе недостаточно данных. Проверьте данные в файле My_Data");
-                count_x = 0;           
+                count_x = -1;           
             }
             finally
             {
