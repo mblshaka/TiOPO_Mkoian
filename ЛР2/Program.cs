@@ -54,23 +54,44 @@ namespace ConsoleApp1
             catch(System.IO.IOException ex)
             {
                 Console.WriteLine("Ошибка считывания файла My_Data. Проверьте путь");
+                count_x = 0;
             }
             catch(System.FormatException ex)
             {
                 Console.WriteLine("В файле содержаться символы не числового формата ИЛИ в фалйе недостаточно данных. Проверьте данные в файле My_Data");
+                count_x = 0;           
             }
             finally
             {
-                switch(count_x)
+                string s_b = "";
+                string s_c = "";
+                switch (count_x)
                 {
                     case 0:
+                        if (b > 0) s_b = "+";
+                        else s_b = "-";
+                        if (c > 0) s_c = "+";
+                        else s_c = "-";
+                        Console.WriteLine("Уравнение: " + a + "x^2" + s_b + b + "x" + s_c + c + "=0");
                         Console.WriteLine("Корней нет");
                         break;
                     case 1:
+                        if (b > 0) s_b = "+";
+                        else s_b = "-";
+                        if (c > 0) s_c = "+";
+                        else s_c = "-";
+                        Console.WriteLine("Уравнение: " + a + "x^2" + s_b + b + "x" + s_c + c + "=0");
                         Console.WriteLine("Корень: " + x_mas[0]);
                         break;
                     case 2:
+                        if (b > 0) s_b = "+";
+                        else s_b = "-";
+                        if (c > 0) s_c = "+";
+                        else s_c = "-";
+                        Console.WriteLine("Уравнение: " + a + "x^2" + s_b + b + "x" + s_c + c + "=0");
                         Console.WriteLine("Первый корень: " + x_mas[0] + "\nВторой корень: " + x_mas[1]);
+                        break;
+                    case -1:
                         break;
 
                 }
