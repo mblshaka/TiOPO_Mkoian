@@ -1,43 +1,121 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace ЛР4
+namespace SquareEquation
 {
+    class DescriminantBelowZero : Exception
+    {
+        public override string Message { get { return "Дискриминант меньше нуля"; } }
+    }
+    class DescriminantZero : Exception
+    {
+        public override string Message { get { return "Дискриминант равен нулю"; } }
+    }
+
     internal class Program
     {
-        delegate int Operation(int num1, int num2);
+        [STAThread]
         static void Main(string[] args)
         {
-            Operation multiplication = (num1, num2) => num1 * num2;
-            Operation summation = (num1, num2) => num1 + num2;
-            Table(10, 10, multiplication, "Таблица умножения");
-            Table(10, 10, summation, "Таблица сумирования");
+            Console.WriteLine("Выберите путь, где будут сохраняться логи\nДля продолжения нажмите любую клавишу");
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
             Console.ReadKey();
-        }
+            fbd.ShowDialog();
+            Console.WriteLine("Путь до папки, где будет проводится сохранение: " + fbd.SelectedPath);
 
-        static void Table(int x, int y, Operation operation, string Name_Table)
-        {
-            Console.WriteLine();
-            Console.WriteLine(Name_Table);
-            for (int i = 1; i <= x; i++)
+            Console.WriteLine("Выберите файл, в котором хранятся данные\nДля продолжения нажмите любую клавишу");
+            OpenFileDialog ofd = new OpenFileDialog();
+            Console.ReadKey();
+            ofd.InitialDirectory = fbd.SelectedPath;
+            ofd.ShowDialog();
+            Console.WriteLine("Путь до файла: " + ofd.FileName);
+
+            double a = 0;
+            double b = 0;
+            double c = 0;
+            string path = ofd.FileName;
+            double[] x_mas = new double[2];
+            int count_x = 0;
+            try
             {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write($"\t{i}");
-            }
-            Console.WriteLine();
-            for (int i = 1; i <= y; i++)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write(i);
-                for (int j = 1; j <= x; j++)
+                string text = "";
+                using (var sr = new StreamReader(path))
                 {
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.Write($"\t{operation(i, j)}");
+                    text = sr.ReadToEnd();
                 }
-                Console.WriteLine();
+
+                int back = 0;
+                string[] x_mas_string = text.Split(' ');
+                a = Convert.ToInt32(Convert.ToString(x_mas_string[0]));
+                b = Convert.ToInt32(Convert.ToString(x_mas_string[1]));
+                c = Convert.ToInt32(Convert.ToString(x_mas_string[2]));
+                double disc = Math.Pow(b, 2) - 4 * a * c;
+                x_mas[0] = (-b + Math.Sqrt(disc)) / (2 * a);
+                x_mas[1] = (-b - Math.Sqrt(disc)) / (2 * a);
+                if (disc < 0) throw new DescriminantBelowZero();
+                if (disc == 0) throw new DescriminantZero();
+                count_x = 2;
+            }
+            catch (DescriminantBelowZero ex)
+            {
+                Console.WriteLine(ex.Message);
+                count_x = 0;
+            }
+            catch (DescriminantZero ex)
+            {
+                Console.WriteLine(ex.Message);
+                count_x = 1;
+            }
+            catch (System.IO.IOException ex)
+            {
+                Console.WriteLine("Ошибка считывания файла My_Data. Проверьте путь");
+                count_x = -1;
+            }
+            catch (System.FormatException ex)
+            {
+                Console.WriteLine("В файле содержаться символы не числового формата ИЛИ в фалйе недостаточно данных. Проверьте данные в файле My_Data");
+                count_x = -1;
+            }
+            finally
+            {
+                string s_b = "";
+                string s_c = "";
+                switch (count_x)
+                {
+                    case 0:
+                        if (b > 0) s_b = "+";
+                        else s_b = "-";
+                        if (c > 0) s_c = "+";
+                        else s_c = "-";
+                        Console.WriteLine("Уравнение: " + a + "x^2" + s_b + b + "x" + s_c + c + "=0");
+                        Console.WriteLine("Корней нет");
+                        break;
+                    case 1:
+                        if (b > 0) s_b = "+";
+                        else s_b = "-";
+                        if (c > 0) s_c = "+";
+                        else s_c = "-";
+                        Console.WriteLine("Уравнение: " + a + "x^2" + s_b + b + "x" + s_c + c + "=0");
+                        Console.WriteLine("Корень: " + x_mas[0]);
+                        break;
+                    case 2:
+                        if (b > 0) s_b = "+";
+                        else s_b = "-";
+                        if (c > 0) s_c = "+";
+                        else s_c = "-";
+                        Console.WriteLine("Уравнение: " + a + "x^2" + s_b + b + "x" + s_c + c + "=0");
+                        Console.WriteLine("Первый корень: " + x_mas[0] + "\nВторой корень: " + x_mas[1]);
+                        break;
+                    case -1:
+                        break;
+
+                }
+                Console.ReadKey();
             }
         }
     }

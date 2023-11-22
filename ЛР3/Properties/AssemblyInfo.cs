@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("SquareEquation")]
+[assembly: AssemblyTitle("ЛР4")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SquareEquation")]
+[assembly: AssemblyProduct("ЛР4")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("7ac13bf6-99be-4ed6-8da4-3d6af441317d")]
+[assembly: Guid("3a8776fb-8fe9-40a9-af16-8762915d6763")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //
