@@ -1,0 +1,8 @@
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\bin\Debug\ЛР4.exe.config
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\bin\Debug\ЛР4.exe
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\bin\Debug\ЛР4.pdb
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\ЛР4.csproj.AssemblyReference.cache
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\ЛР4.csproj.SuggestedBindingRedirects.cache
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\ЛР4.csproj.CoreCompileInputs.cache
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\ЛР4.exe
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\ЛР4.pdb
