@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace SquareEquation
 {
@@ -22,6 +23,20 @@ namespace SquareEquation
         [STAThread]
         static void Main(string[] args)
         {
+            //EventLog eventLog = new EventLog();
+
+            //eventLog.Source = "MyApplication";
+            //eventLog.Log = "Application";
+
+            //eventLog.WriteEntry("Log message", EventLogEntryType.Error);
+
+            //EventLogEntryCollection eventLogEntryCollection = eventLog.Entries;
+            //foreach (EventLogEntry entry in eventLogEntryCollection)
+            //{
+            //    Console.WriteLine(entry.Message);
+            //}
+
+            //ВЫШЕ ЛОГИРОВАНИЕ, КОТОРОЕ НУЖНО МУТИТЬ-ВЕРТЕТЬ
             Console.WriteLine("Выберите путь, где будут сохраняться логи\nДля продолжения нажмите любую клавишу");
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             Console.ReadKey();
@@ -65,6 +80,18 @@ namespace SquareEquation
             {
                 Console.WriteLine(ex.Message);
                 count_x = 0;
+                          EventLog eventLog = new EventLog();
+
+            eventLog.Source = "MyApplication";
+            eventLog.Log = "Application";
+
+            eventLog.WriteEntry("Log message", EventLogEntryType.Error);
+
+            EventLogEntryCollection eventLogEntryCollection = eventLog.Entries;
+            foreach (EventLogEntry entry in eventLogEntryCollection)
+            {
+                Console.WriteLine(entry.Message);
+            }
             }
             catch (DescriminantZero ex)
             {

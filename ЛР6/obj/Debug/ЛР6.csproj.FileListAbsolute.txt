@@ -1,0 +1,7 @@
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР6\bin\Debug\ЛР6.dll.config
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР6\bin\Debug\ЛР6.dll
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР6\bin\Debug\ЛР6.pdb
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР6\obj\Debug\ЛР6.csproj.AssemblyReference.cache
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР6\obj\Debug\ЛР6.csproj.CoreCompileInputs.cache
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР6\obj\Debug\ЛР6.dll
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР6\obj\Debug\ЛР6.pdb

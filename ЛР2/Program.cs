@@ -35,11 +35,13 @@ namespace ConsoleApp1
                 b = Convert.ToInt32(Convert.ToString(x_mas_string[1]));
                 c = Convert.ToInt32(Convert.ToString(x_mas_string[2]));
                 double disc = Math.Pow(b, 2) - 4 * a * c;
-                x_mas[0] = (-b + Math.Sqrt(disc))/ (2*a);
-                x_mas[1] = (-b - Math.Sqrt(disc))/ (2*a);
+                x_mas[0] = (-b + Math.Sqrt(disc)) / (2*a);
+                x_mas[1] = (-b - Math.Sqrt(disc)) / (2*a);
                 if (disc < 0) throw new DescriminantBelowZero();
                 if (disc == 0) throw new DescriminantZero();
                 count_x = 2;
+
+
             }
             catch(DescriminantBelowZero ex)
             {

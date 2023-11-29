@@ -13,8 +13,8 @@ namespace ЛР4
         {
             Operation multiplication = (num1, num2) => num1 * num2;
             Operation summation = (num1, num2) => num1 + num2;
-            Table(10, 10, multiplication, "Таблица умножения");
-            Table(10, 10, summation, "Таблица сумирования");
+            Table(20, 30, summation, "Таблица сумирования");
+            Table(8, 5, multiplication, "Таблица умножения");
             Console.ReadKey();
         }
 
@@ -24,13 +24,13 @@ namespace ЛР4
             Console.WriteLine(Name_Table);
             for (int i = 1; i <= x; i++)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
+                //Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write($"\t{i}");
             }
             Console.WriteLine();
             for (int i = 1; i <= y; i++)
             {
-                Console.ForegroundColor = ConsoleColor.Green;
+                //Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write(i);
                 for (int j = 1; j <= x; j++)
                 {

@@ -22,3 +22,11 @@ C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР3\obj\Debug\SquareEquation.csp
 C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР3\obj\Debug\SquareEquation.csproj.CoreCompileInputs.cache
 C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР3\obj\Debug\SquareEquation.exe
 C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР3\obj\Debug\SquareEquation.pdb
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\bin\Debug\SquareEquation.exe.config
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\bin\Debug\SquareEquation.exe
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\bin\Debug\SquareEquation.pdb
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\SquareEquation.csproj.AssemblyReference.cache
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\SquareEquation.csproj.SuggestedBindingRedirects.cache
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\SquareEquation.csproj.CoreCompileInputs.cache
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\SquareEquation.exe
+C:\Users\MblSHA\Documents\GitHub\TiOPO_Mkoian\ЛР4\obj\Debug\SquareEquation.pdb
